@@ -4,6 +4,7 @@ A simple helper aimed at reducing the setup effort needed to create directories,
 
 == Example
   
+  require 'rubygems'
   require 'filetesthelper'
   include FileTestHelper
 
