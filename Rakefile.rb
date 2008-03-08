@@ -22,9 +22,9 @@ CLEAN.include ["pkg", "coverage", "doc"]
 spec = Gem::Specification.new do |s| 
   s.name = NAME
   s.version = PKGVERSION
-  s.author = "Daniel Cadenas"
-  s.email = "dcadenas@gmail.com"
-  s.homepage = "http://dcadenas.blogspot.com"
+  s.author = "Daniel Cadenas Nión"
+  s.email = "filetesthelper-devel@rubyforge.org"
+  s.homepage = "http://rubyforge.org/projects/filetesthelper/"
   s.platform = Gem::Platform::RUBY
   s.summary = "A simple helper aimed at reducing the setup effort needed to create directories, files and file content in integration test cases."
   s.description = s.summary
