@@ -7,7 +7,7 @@ require 'rake/gempackagetask'
 require 'spec/rake/spectask'
 
 NAME = 'filetesthelper'
-PKGVERSION = '1.0.0'
+PKGVERSION = '0.9.0'
 is_windows = (PLATFORM =~ /win32|cygwin/)
 SUDO = is_windows ? '' : 'sudo'
 README = "README.txt"
