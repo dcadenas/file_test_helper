@@ -58,7 +58,7 @@ end
 Spec::Rake::SpecTask.new('specs_with_rcov') do |t|
   t.ruby_opts << '-rubygems'
   t.spec_files = Dir['spec/**/*_spec.rb']
-  t.spec_opts = ['-f s']
+  t.spec_opts = ['--options', 'spec/spec.opts']
   t.rcov = true
   t.rcov_opts = ['--text-summary']
 end
