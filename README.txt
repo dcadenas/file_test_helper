@@ -2,7 +2,10 @@
 
 A simple helper aimed at reducing the setup effort needed to create directories, files and file content in the scope of an integration test case.
 
-== Example
+== Installation
+  gem install filetesthelper
+  
+== Usage
   
   require 'rubygems'
   require 'filetesthelper'
