@@ -63,4 +63,10 @@ describe FileTestHelper do
   it 'should not throw a exception when the hash parameter is nil' do
     lambda { with_files(nil) {}}.should_not raise_error
   end
+  
+  it 'should run the block even when the hash parameter is nil' do
+    block_runned = false
+    with_files(nil) {block_runned = true}
+    block_runned.should be_true
+  end
 end

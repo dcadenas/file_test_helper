@@ -12,11 +12,8 @@ module FileTestHelper
     begin
       initial_directory = current_directory()
       working_directory = create_working_directory()
-      
-      unless files_with_contents == nil
-        create_files_in_working_directory(working_directory, files_with_contents)
-        yield
-      end
+      create_files_in_working_directory(working_directory, files_with_contents)
+      yield
     ensure
       cd initial_directory
       remove_dir(working_directory) if File.exist?(working_directory)
@@ -36,6 +33,8 @@ module FileTestHelper
   end
   
   def create_files_in_working_directory(working_directory, files_with_contents)
+    return unless files_with_contents
+    
     cd working_directory
     files_with_contents.each do |path, file_contents|
       fail 'A path is not allowed to start with /' if path =~ /^\//
