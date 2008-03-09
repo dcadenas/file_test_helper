@@ -12,8 +12,11 @@ module FileTestHelper
     begin
       initial_directory = current_directory()
       working_directory = create_working_directory()
-      create_files_in_working_directory(working_directory, files_with_contents)
-      yield
+      
+      unless files_with_contents == nil
+        create_files_in_working_directory(working_directory, files_with_contents)
+        yield
+      end
     ensure
       cd initial_directory
       remove_dir(working_directory) if File.exist?(working_directory)

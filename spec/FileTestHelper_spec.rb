@@ -59,4 +59,8 @@ describe FileTestHelper do
   it 'should throw an error if a path uses ".."' do
     lambda { with_files('../../dir/filea' => 'content of filea') {}}.should raise_error
   end
+  
+  it 'should not throw a exception when the hash parameter is nil' do
+    lambda { with_files(nil) {}}.should_not raise_error
+  end
 end

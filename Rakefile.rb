@@ -7,7 +7,7 @@ require 'rake/gempackagetask'
 require 'spec/rake/spectask'
 
 NAME = 'filetesthelper'
-PKGVERSION = '0.9.0'
+PKGVERSION = '0.9.1'
 is_windows = (PLATFORM =~ /win32|cygwin/)
 SUDO = is_windows ? '' : 'sudo'
 README = "README.txt"
@@ -22,7 +22,7 @@ CLEAN.include ["pkg", "coverage", "doc"]
 spec = Gem::Specification.new do |s| 
   s.name = NAME
   s.version = PKGVERSION
-  s.author = "Daniel Cadenas Nión"
+  s.author = "Daniel Cadenas Niï¿½n"
   s.email = "filetesthelper-devel@rubyforge.org"
   s.homepage = "http://rubyforge.org/projects/filetesthelper/"
   s.platform = Gem::Platform::RUBY
