@@ -22,7 +22,7 @@ CLEAN.include ["pkg", "coverage", "doc"]
 spec = Gem::Specification.new do |s| 
   s.name = NAME
   s.version = PKGVERSION
-  s.author = "Daniel Cadenas Ni�n"
+  s.author = "Daniel Cadenas Nión"
   s.email = "filetesthelper-devel@rubyforge.org"
   s.homepage = "http://rubyforge.org/projects/filetesthelper/"
   s.platform = Gem::Platform::RUBY

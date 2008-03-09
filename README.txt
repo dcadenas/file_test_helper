@@ -26,5 +26,5 @@ A simple helper aimed at reducing the setup effort needed to create directories,
     #When we finish we are back at directory X and the Y directory is deleted with all its contents
   end
 
-See the {specs}[link:specs.html], the {Rubyforge homepage}[http://rubyforge.org/projects/filetesthelper] and my {blog}[http://dcadenas.blogspot.com/2008/03/file-system-integration-tests-helper.html] for more details.
+See the {specs}[link:specs.html], the {Rubyforge project homepage}[http://rubyforge.org/projects/filetesthelper] and my {blog}[http://dcadenas.blogspot.com/2008/03/file-system-integration-tests-helper.html] for more details.
 
