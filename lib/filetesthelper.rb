@@ -33,9 +33,9 @@ module FileTestHelper
   end
   
   def create_files_in_working_directory(working_directory, files_with_contents)
-    return unless files_with_contents
-    
     cd working_directory
+    
+    return unless files_with_contents
     files_with_contents.each do |path, file_contents|
       fail 'A path is not allowed to start with /' if path =~ /^\//
       fail 'A path is not allowed to contain ..' if path =~ /\.\./
