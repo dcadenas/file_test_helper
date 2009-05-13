@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{A simple helper aimed at reducing the setup effort needed to create directories, files and file content in integration test cases.}
   s.email = %q{dcadenas@gmail.com}
   s.extra_rdoc_files = ["README.rdoc"]
-  s.files = ["Rakefile.rb", "README.rdoc", "VERSION.yml", "lib/filetesthelper.rb", "spec/FileTestHelper_spec.rb", "spec/spec.opts", "spec/spec_helper.rb"]
+  s.files = ["Rakefile.rb", "README.rdoc", "VERSION.yml", "lib/file_test_helper.rb", "spec/file_test_helper_spec.rb", "spec/spec.opts", "spec/spec_helper.rb"]
   s.has_rdoc = true
   s.homepage = %q{http://rubyforge.org/projects/filetesthelper/}
   s.rdoc_options = ["--inline-source", "--charset=UTF-8"]
