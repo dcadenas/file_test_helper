@@ -103,9 +103,11 @@ describe FileTestHelper do
       test_file = 'should_persist_after_test.txt'
       begin
         `touch #{test_file}`
-        with_files_in_directory(Dir.pwd, 'somefile.txt' => '') {}
+        with_files_in_directory(Dir.pwd, 'dir/somefile.txt' => '', 'anotherfile.txt' => '') {}
 
-        File.exist?('somefile.txt').should be_false
+        File.exist?('dir/somefile.txt').should be_false
+        File.exist?('anotherfile.txt').should be_false
+        File.exist?('dir').should be_false
         File.exist?(test_file).should be_true
       ensure
         File.delete(test_file)

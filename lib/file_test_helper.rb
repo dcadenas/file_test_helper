@@ -52,9 +52,9 @@ module FileTestHelper
     return unless files_with_contents
     files_with_contents.each do |path, file_contents|
       raise ArguemntError, 'A path is not allowed to start with /' if path =~ /^\//
-        raise ArgumentError, 'A path is not allowed to contain ..' if path =~ /\.\./
+      raise ArgumentError, 'A path is not allowed to contain ..' if path =~ /\.\./
 
-        dir, file = path.scan(/(.*[\/])?([^\/]*$)/)[0] 
+      dir, file = path.scan(/(.*[\/])?([^\/]*$)/)[0] 
       mkpath dir unless(dir.nil? or dir.empty?)
 
       unless(file.nil? or file.empty?)
@@ -72,7 +72,7 @@ module FileTestHelper
     cd base_dir
     begin
       files_with_contents.each do |path, file_contents|
-        remove_dir(path)
+        remove_dir(path.split(File::SEPARATOR).first)
       end
     ensure
       cd initial_dir
