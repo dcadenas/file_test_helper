@@ -99,9 +99,17 @@ describe FileTestHelper do
       end
     end
 
-    it "should delete the created files" do
-      with_files_in_directory(Dir.pwd, 'somefile.txt' => '') {}
-      File.exist?('somefile.txt').should be_false
+    it "should delete only the created files" do
+      test_file = 'should_persist_after_test.txt'
+      begin
+        `touch #{test_file}`
+        with_files_in_directory(Dir.pwd, 'somefile.txt' => '') {}
+
+        File.exist?('somefile.txt').should be_false
+        File.exist?(test_file).should be_true
+      ensure
+        File.delete(test_file)
+      end
     end
 
     it "should throw an exception if the specified base dir doesn't exist" do
