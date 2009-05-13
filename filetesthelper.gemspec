@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{filetesthelper}
-  s.version = "0.10.0"
+  s.version = "0.10.1"
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Cadenas Ni\303\263n"]
   s.autorequire = %q{filetesthelper}
