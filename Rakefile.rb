@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'rubygems'
 require 'rubygems/gem_runner'
 require 'rake'
