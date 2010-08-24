@@ -51,7 +51,7 @@ module FileTestHelper
 
     return unless files_with_contents
     files_with_contents.each do |path, file_contents|
-      raise ArguemntError, 'A path is not allowed to start with /' if path =~ /^\//
+      raise ArgumentError, 'A path is not allowed to start with /' if path =~ /^\//
       raise ArgumentError, 'A path is not allowed to contain ..' if path =~ /\.\./
 
       dir, file = path.scan(/(.*[\/])?([^\/]*$)/)[0] 

@@ -16,7 +16,7 @@ begin
     gemspec.homepage = "http://rubyforge.org/projects/filetesthelper/"
     gemspec.description = gemspec.summary
     gemspec.authors = ["Daniel Cadenas Nión"]
-    gemspec.version = '0.9.1'
+    gemspec.version = '1.0.1'
     gemspec.platform = Gem::Platform::RUBY
   #gemspec.files = Dir["{spec,lib}/**/*"] + [README, "Rakefile.rb"]
     gemspec.require_path = 'lib'
