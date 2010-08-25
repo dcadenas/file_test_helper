@@ -18,14 +18,19 @@ module FileTestHelper
   end
 
   def with_files_in_directory(base_dir, files_with_contents)
+    stdout = $stdout
+    $stdout = File.new('/dev/null', 'w')
+
     initial_directory = current_directory
     raise ArgumentError, "The base directory '#{base_dir}' does not exist." if base_dir && !File.exist?(base_dir)
     working_directory = base_dir || create_working_directory
 
     begin
       create_files_in_working_directory(working_directory, files_with_contents)
+      $stdout = stdout
       yield
     ensure
+      $stdout = File.new('/dev/null', 'w')
       cd initial_directory
       if base_dir.nil?
         remove_dir(working_directory) if File.exist?(working_directory)
@@ -33,6 +38,8 @@ module FileTestHelper
         remove_files(base_dir, files_with_contents)
       end
     end
+  ensure
+    $stdout = stdout
   end
 
   private
@@ -64,7 +71,7 @@ module FileTestHelper
       else
         raise ArgumentError, 'File content can only be set to files' unless file_contents.nil? or file_contents.empty?
       end
-    end    
+    end
   end
 
   def remove_files(base_dir, files_with_contents)
