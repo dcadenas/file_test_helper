@@ -4,13 +4,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{filetesthelper}
+  s.name = %q{file_test_helper}
   s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Cadenas Ni\303\263n"]
-  s.autorequire = %q{filetesthelper}
-  s.date = %q{2010-08-24}
+  s.autorequire = %q{file_test_helper}
+  s.date = %q{2010-11-16}
   s.description = %q{A simple helper aimed at reducing the setup effort needed to create directories, files and file content in integration test cases.}
   s.email = %q{dcadenas@gmail.com}
   s.extra_rdoc_files = [
@@ -19,14 +19,13 @@ Gem::Specification.new do |s|
   s.files = [
     "README.rdoc",
      "Rakefile.rb",
-     "VERSION.yml",
-     "filetesthelper.gemspec",
+     "file_test_helper.gemspec",
      "lib/file_test_helper.rb",
      "spec/file_test_helper_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://rubyforge.org/projects/filetesthelper/}
+  s.homepage = %q{http://github.com/dcadenas/filetesthelper}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
