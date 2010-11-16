@@ -3,41 +3,41 @@
 A simple helper aimed at reducing the setup effort needed to create directories, files and file content in the scope of an integration test case.
 
 == Installation
-  sudo gem install filetesthelper
-  
+  gem install file_test_helper
+
 == Usage
-  
+
   require 'rubygems'
-  require 'filetesthelper'
+  require 'file_test_helper'
   include FileTestHelper
 
   ...
-  
+
   def test_some_code_that_needs_to_manipulate_some_files
     #Let's say that the current directory here is X
-    
+
     with_files('dir1/file1' => 'this is file1 content', 'dir1/file2' => 'this is file2 content') do
       #Now the current directory changed to Y which is a new directory
       #created under Dir.tmpdir containing only 'dir1/file1' and 'dir1/file2'.
 
       #Put some test code here.
     end
-    
+
     #When we finish we are back at directory X and the Y directory is deleted with all its contents
   end
 
   def test_some_code_that_uses_a_base_directory_other_than_the_temp_dir
     #Let's say that the current directory here is X
-    
+
     with_files_in_directory('existent_dir', 'dir1/file1' => 'this is file1 content', 'dir1/file2' => 'this is file2 content') do
       #Now the current directory changed to existent_dir which is some existent directory under your system, absolute paths are allowed.
       #The directory contents are 'dir1/file1' and 'dir1/file2' plus anything that existed previously.
 
       #Put some test code here.
     end
-    
+
     #When we finish we are back at directory X and the existent_dir directory has our two test files removed
   end
 
-See the {specs}[http://filetesthelper.rubyforge.org/specs.html] and the {Rubyforge project homepage}[http://rubyforge.org/projects/filetesthelper] for more details.
+See the specs for more details.
 
